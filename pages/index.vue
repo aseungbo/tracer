@@ -24,8 +24,9 @@
               class="text-sm-h2 font-weight-bold mt-8 mt-sm-16"
               style="min-height: 50px"
               :style="`color: ${twColors.palette.blue};`"
-              >받기 위한
+              >취합
             </span>
+            하는
           </span>
         </div>
         <div class="d-flex d-sm-none mt-16">
@@ -48,14 +49,19 @@
             <span
               class="text-h5 text-sm-h2 font-weight-bold mt-0 mt-sm-16"
               :style="`color: ${twColors.palette.blue};`"
-              >간편하고 빠른</span
+              >안전</span
+            >하고,
+            <span
+              class="text-h5 text-sm-h2 font-weight-bold mt-0 mt-sm-16"
+              :style="`color: ${twColors.palette.blue};`"
+              >간소화</span
             >
-            방법
+            된 방법
           </p>
         </div>
         <div class="d-flex flex-column my-16 align-center" style="gap: 0.5rem">
           <p class="text-subtitle-2 text-sm-h5 font-weight-bold px-8">
-            트레이서를 통해 문서를 받기 위한 번거로움에서 벗어나세요.
+            트레이서를 통해 문서를 간편하게 수집하세요.
           </p>
         </div>
         <v-form class="d-flex align-center w-75" style="gap: 1rem">

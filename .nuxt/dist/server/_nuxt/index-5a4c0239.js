@@ -326,7 +326,7 @@ function getDimensions(target, el) {
     speed
   };
 }
-const index_vue_vue_type_style_index_0_scoped_5a588614_lang = "";
+const index_vue_vue_type_style_index_0_scoped_bf459df9_lang = "";
 const VCard$1 = "";
 const VCardActions = /* @__PURE__ */ defineComponent({
   name: "VCardActions",
@@ -3006,16 +3006,13 @@ const _sfc_main = {
           loading.value = false;
           dialog.value = true;
           email.value = "";
-        }, 500);
+        }, 250);
       });
     };
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({
-        class: "d-flex flex-column px-sm-8",
-        style: { "gap": "1rem" }
-      }, _attrs))} data-v-5a588614><div class="d-flex flex-column flex-sm-row justify-center align-center" style="${ssrRenderStyle([{ "gap": "5rem" }, `min-height: ${unref(cardHeight)}`])}" data-v-5a588614><div class="d-flex flex-column w-100 w-sm-50 align-center align-sm-start text-center text-sm-left" style="${ssrRenderStyle({ "gap": "2rem", "max-width": "840px", "min-width": "540px" })}" data-v-5a588614><div class="d-flex w-100" data-v-5a588614><span class="text-h4 text-sm-h3 font-weight-bold mt-0 mt-sm-16 ml-16 ml-sm-0 w-75 text-center" style="${ssrRenderStyle([{ "min-height": "50px" }, `color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue};`])}" data-v-5a588614>${ssrInterpolate(unref(currentText))}</span><span class="text-h4 text-sm-h3 font-weight-bold mt-0 mt-sm-16 mr-16 mr-sm-0 w-25" style="${ssrRenderStyle({ "min-height": "50px" })}" data-v-5a588614>를 </span></div><p class="text-h6 text-sm-h3 font-weight-bold mt-0" data-v-5a588614> 가장 <span class="text-h6 text-sm-h3 font-weight-bold mt-0 mt-sm-16" style="${ssrRenderStyle(`color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue};`)}" data-v-5a588614>쉽고 빠르게</span> 전달 받는 방법 </p><span class="text-subtitle-2 text-sm-h6" data-v-5a588614> 트레이서를 통해 간편하게 문서를 수집하고, 확인하세요.</span>`);
+      _push(`<div${ssrRenderAttrs(_attrs)} data-v-bf459df9><div class="d-flex flex-column flex-sm-row justify-center align-center" style="${ssrRenderStyle([{ "gap": "2.5rem" }, `min-height: ${unref(cardHeight)}`])}" data-v-bf459df9><div class="d-flex flex-column w-100 w-sm-50 align-center align-sm-start text-center px-8 mx-sm-16" style="${ssrRenderStyle({ "gap": "1rem", "max-width": "840px", "min-width": "375px" })}" data-v-bf459df9><div class="d-none d-sm-flex w-100 align-center" data-v-bf459df9><span class="text-sm-h2 font-weight-bold mt-8 mt-sm-16 text-center" style="${ssrRenderStyle([{ "min-height": "50px", "width": "25%", "min-width": "200px" }, `color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue};`])}" data-v-bf459df9>${ssrInterpolate(unref(currentText))}</span><span class="text-sm-h2 font-weight-bold mt-8 mt-sm-16" style="${ssrRenderStyle({ "min-height": "50px", "width": "75%" })}" data-v-bf459df9>문서를 <span class="text-sm-h2 font-weight-bold mt-8 mt-sm-16" style="${ssrRenderStyle([{ "min-height": "50px" }, `color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue};`])}" data-v-bf459df9>받기 위한 </span></span></div><div class="d-flex d-sm-none mt-16" data-v-bf459df9><span class="text-h5 font-weight-bold" style="${ssrRenderStyle([{ "min-width": "125px" }, `color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue};`])}" data-v-bf459df9>${ssrInterpolate(unref(currentText))}</span><span class="text-h5 font-weight-bold" data-v-bf459df9>문서를 <span class="text-h5 font-weight-bold" style="${ssrRenderStyle(`color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue};`)}" data-v-bf459df9>받기 위한 </span></span></div><div class="d-flex align-center" data-v-bf459df9><p class="text-h5 text-sm-h2 font-weight-bold mt-0" data-v-bf459df9> 가장 <span class="text-h5 text-sm-h2 font-weight-bold mt-0 mt-sm-16" style="${ssrRenderStyle(`color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue};`)}" data-v-bf459df9>간편하고 빠른</span> 방법 </p></div><div class="d-flex flex-column my-16 align-center" style="${ssrRenderStyle({ "gap": "0.5rem" })}" data-v-bf459df9><p class="text-subtitle-2 text-sm-h5 font-weight-bold px-8" data-v-bf459df9> 트레이서를 통해 문서를 받기 위한 번거로움에서 벗어나세요. </p></div>`);
       _push(ssrRenderComponent(VForm, {
-        class: "d-flex align-center w-75 px-8 mt-8",
+        class: "d-flex align-center w-75",
         style: { "gap": "1rem" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -3024,8 +3021,8 @@ const _sfc_main = {
               _push2(ssrRenderComponent(VTextField, {
                 class: "w-50",
                 style: { "width": "12rem" },
-                label: "이메일을 입력하세요",
-                placeholder: "이메일을 입력하세요",
+                label: "이메일",
+                placeholder: "이메일",
                 "single-line": "",
                 "hide-details": "",
                 clearable: "",
@@ -3039,17 +3036,17 @@ const _sfc_main = {
             _push2(ssrRenderComponent(VBtn, {
               loading: unref(loading),
               onClick: handleSubmit,
-              style: [`width: ${unref(loading) ? "100%" : "25%"}`, { "height": "3rem" }],
+              style: [`width: ${unref(loading) ? "100%" : "30%"}`, { "height": "3rem" }],
               variant: "flat",
               color: ("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue
             }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<span class="text-subtitle-1 font-weight-bold" style="${ssrRenderStyle(`color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.white};`)}" data-v-5a588614${_scopeId2}> 사전예약 </span>`);
+                  _push3(`<span class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold" style="${ssrRenderStyle(`color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.white};`)}" data-v-bf459df9${_scopeId2}> 사전예약 </span>`);
                 } else {
                   return [
                     createVNode("span", {
-                      class: "text-subtitle-1 font-weight-bold",
+                      class: "text-subtitle-2 text-sm-subtitle-1 font-weight-bold",
                       style: `color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.white};`
                     }, " 사전예약 ", 4)
                   ];
@@ -3063,8 +3060,8 @@ const _sfc_main = {
                 key: 0,
                 class: "w-50",
                 style: { "width": "12rem" },
-                label: "이메일을 입력하세요",
-                placeholder: "이메일을 입력하세요",
+                label: "이메일",
+                placeholder: "이메일",
                 "single-line": "",
                 "hide-details": "",
                 clearable: "",
@@ -3075,13 +3072,13 @@ const _sfc_main = {
               createVNode(VBtn, {
                 loading: unref(loading),
                 onClick: handleSubmit,
-                style: [`width: ${unref(loading) ? "100%" : "25%"}`, { "height": "3rem" }],
+                style: [`width: ${unref(loading) ? "100%" : "30%"}`, { "height": "3rem" }],
                 variant: "flat",
                 color: ("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.blue
               }, {
                 default: withCtx(() => [
                   createVNode("span", {
-                    class: "text-subtitle-1 font-weight-bold",
+                    class: "text-subtitle-2 text-sm-subtitle-1 font-weight-bold",
                     style: `color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.white};`
                   }, " 사전예약 ", 4)
                 ]),
@@ -3093,7 +3090,7 @@ const _sfc_main = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(VDialog, {
-        class: "w-25",
+        class: "w-sm-25",
         modelValue: unref(dialog),
         "onUpdate:modelValue": ($event) => isRef(dialog) ? dialog.value = $event : null
       }, {
@@ -3123,7 +3120,7 @@ const _sfc_main = {
                           }),
                           _: 1
                         }, _parent4, _scopeId3));
-                        _push4(`<p class="text-subtitle-1 text-center mt-2" data-v-5a588614${_scopeId3}>사전 예약이 완료되었습니다.</p>`);
+                        _push4(`<p class="text-subtitle-1 font-weight-bold text-center mt-2" data-v-bf459df9${_scopeId3}> 사전예약이 완료되었습니다. </p>`);
                       } else {
                         return [
                           createVNode(VIcon, {
@@ -3135,7 +3132,7 @@ const _sfc_main = {
                             ]),
                             _: 1
                           }),
-                          createVNode("p", { class: "text-subtitle-1 text-center mt-2" }, "사전 예약이 완료되었습니다.")
+                          createVNode("p", { class: "text-subtitle-1 font-weight-bold text-center mt-2" }, " 사전예약이 완료되었습니다. ")
                         ];
                       }
                     }),
@@ -3152,7 +3149,7 @@ const _sfc_main = {
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
-                              _push5(`<span class="text-subtitle-1 font-weight-bold" style="${ssrRenderStyle(`color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.white};`)}" data-v-5a588614${_scopeId4}> 확인 </span>`);
+                              _push5(`<span class="text-subtitle-1 font-weight-bold" style="${ssrRenderStyle(`color: ${("twColors" in _ctx ? _ctx.twColors : unref(twColors)).palette.white};`)}" data-v-bf459df9${_scopeId4}> 확인 </span>`);
                             } else {
                               return [
                                 createVNode("span", {
@@ -3198,7 +3195,7 @@ const _sfc_main = {
                           ]),
                           _: 1
                         }),
-                        createVNode("p", { class: "text-subtitle-1 text-center mt-2" }, "사전 예약이 완료되었습니다.")
+                        createVNode("p", { class: "text-subtitle-1 font-weight-bold text-center mt-2" }, " 사전예약이 완료되었습니다. ")
                       ]),
                       _: 1
                     }),
@@ -3244,7 +3241,7 @@ const _sfc_main = {
                         ]),
                         _: 1
                       }),
-                      createVNode("p", { class: "text-subtitle-1 text-center mt-2" }, "사전 예약이 완료되었습니다.")
+                      createVNode("p", { class: "text-subtitle-1 font-weight-bold text-center mt-2" }, " 사전예약이 완료되었습니다. ")
                     ]),
                     _: 1
                   }),
@@ -3275,7 +3272,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</div><div class="d-flex w-50 video-style" data-v-5a588614><iframe class="w-100"${ssrRenderAttr("src", unref(embedUrl))} style="${ssrRenderStyle({ "width": "20rem" })}" frameborder="0" data-v-5a588614></iframe></div></div></div>`);
+      _push(`</div><div class="d-flex w-50 video-style" data-v-bf459df9><iframe class="w-100"${ssrRenderAttr("src", unref(embedUrl))} style="${ssrRenderStyle({ "width": "20rem" })}" frameborder="0" data-v-bf459df9></iframe></div></div></div>`);
     };
   }
 };
@@ -3285,8 +3282,8 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/index.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-5a588614"]]);
+const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-bf459df9"]]);
 export {
   index as default
 };
-//# sourceMappingURL=index-4df1cd76.js.map
+//# sourceMappingURL=index-5a4c0239.js.map
