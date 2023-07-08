@@ -1,4 +1,26 @@
 <template>
+  <v-app-bar>
+    <div class="w-100 d-flex justify-space-between align-center px-2 px-sm-16">
+      <div class="d-flex align-center flex-shrink-0" style="gap: 1rem">
+        <v-icon :color="twColors.palette.blue" size="2rem">mdi-lightning-bolt</v-icon>
+        <NuxtLink style="cursor: pointer">
+          <span class="text-h6 font-weight-bold">Tracer</span>
+        </NuxtLink>
+      </div>
+      <div class="d-flex" style="gap: 1rem">
+        <div class="d-flex" style="gap: 1rem">
+          <v-btn variant="flat" @click="dialog = true" :color="twColors.palette.blue">
+            <span
+              class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold"
+              :style="`color: ${twColors.palette.white};`"
+            >
+              시작하기
+            </span>
+          </v-btn>
+        </div>
+      </div>
+    </div>
+  </v-app-bar>
   <div>
     <div
       class="d-flex flex-column flex-sm-row justify-center align-center"
@@ -39,7 +61,7 @@
           <span class="text-h5 font-weight-bold"
             >문서를
             <span class="text-h5 font-weight-bold" :style="`color: ${twColors.palette.blue};`"
-              >받기 위한
+              >취합하는
             </span>
           </span>
         </div>
@@ -60,42 +82,64 @@
           </p>
         </div>
         <div class="d-flex flex-column my-16 align-center" style="gap: 0.5rem">
-          <p class="text-subtitle-2 text-sm-h5 font-weight-bold px-8">
+          <p class="text-subtitle-1 text-sm-h5 font-weight-bold">
             트레이서를 통해 문서를 간편하게 수집하세요.
           </p>
         </div>
-        <v-form class="d-flex align-center w-75" style="gap: 1rem">
-          <v-text-field
-            v-if="!loading"
-            class="w-50"
-            style="width: 12rem"
-            label="이메일"
-            placeholder="이메일"
-            single-line
-            hide-details
-            clearable
-            color="blue"
-            v-model="email"
-          ></v-text-field>
-          <v-btn
-            :loading="loading"
-            @click="handleSubmit"
-            :style="`width: ${loading ? '100%' : '30%'}`"
-            style="height: 3rem"
-            variant="flat"
-            :color="twColors.palette.blue"
+
+        <v-btn
+          class="mb-16"
+          @click="dialog = true"
+          style="height: 3rem; min-width: 200px"
+          variant="flat"
+          :color="twColors.palette.blue"
+        >
+          <span
+            class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold"
+            :style="`color: ${twColors.palette.white};`"
           >
-            <span
-              class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold"
-              :style="`color: ${twColors.palette.white};`"
-            >
-              사전예약
-            </span>
-          </v-btn>
-        </v-form>
-        <v-dialog class="w-sm-25" v-model="dialog">
-          <v-card class="align-center py-4" style="height: 20rem">
-            <v-card-text class="d-flex flex-column justify-center align-center">
+            시작하기
+          </span>
+        </v-btn>
+        <v-dialog class="w-25" v-model="dialog" style="min-width: 370px">
+          <v-card class="align-center py-8" style="height: 40rem">
+            <v-card-text v-if="!submitted" class="w-75 d-flex flex-column justify-center">
+              <v-form class="w-100 d-flex flex-column align-center">
+                <div class="d-flex my-4 mr-4">
+                  <v-icon :color="twColors.palette.blue" size="2rem">mdi-lightning-bolt</v-icon>
+                  <span class="text-h5 font-weight-bold">Tracer</span>
+                </div>
+                <p class="text-subtitle-1 font-weight-bold text-center mb-4">
+                  현재 열심히 개발 중이에요 🚀
+                </p>
+                <p class="text-subtitle-1 font-weight-bold text-center mb-4">
+                  사전예약하고 1개월 무료 이용권 받아보세요!
+                </p>
+                <p class="text-subtitle-1 font-weight-bold align-center mb-4">이메일</p>
+                <v-text-field
+                  class="w-100 mb-8"
+                  label="이메일"
+                  placeholder="이메일"
+                  single-line
+                  hide-details
+                  clearable
+                  color="blue"
+                  v-model="email"
+                ></v-text-field>
+                <p class="text-subtitle-1 font-weight-bold text-center mb-4">직책</p>
+                <v-text-field
+                  class="w-100 mb-8"
+                  label="직책"
+                  placeholder="직책"
+                  single-line
+                  hide-details
+                  clearable
+                  color="blue"
+                  v-model="position"
+                ></v-text-field>
+              </v-form>
+            </v-card-text>
+            <v-card-text v-else class="d-flex flex-column justify-center align-center">
               <v-icon size="7rem" color="green">mdi-check-circle-outline</v-icon>
               <p class="text-subtitle-1 font-weight-bold text-center mt-2">
                 사전예약이 완료되었습니다.
@@ -103,15 +147,20 @@
             </v-card-text>
             <v-card-actions>
               <v-btn
-                style="min-width: 5rem"
+                :loading="loading"
+                style="min-width: 200px; min-height: 50px"
                 variant="flat"
                 :color="twColors.palette.blue"
-                @click="dialog = false"
+                @click="
+                  () => {
+                    submitted ? (dialog = false) : handleSubmit();
+                  }
+                "
                 ><span
                   class="text-subtitle-1 font-weight-bold"
                   :style="`color: ${twColors.palette.white};`"
                 >
-                  확인
+                  {{ submitted ? "닫기" : "사전예약" }}
                 </span></v-btn
               >
             </v-card-actions>
@@ -185,20 +234,24 @@ const pageHeight = ref("");
 const cardHeight = ref("");
 const responseCardHeight = ref("");
 const email = ref("");
-
+const position = ref("");
 const loading = ref(false);
+
+const submitted = ref(false);
 const dialog = ref(false);
-const formSparkUrl = ref("https://submit-form.com/UxEzXm6O");
+const formSparkUrl = ref("https://submit-form.com/yuuWqUdz");
 
 const handleSubmit = async () => {
   loading.value = true;
-  await axios.post(formSparkUrl.value, { email: email.value }).then((response) => {
-    setTimeout(() => {
-      loading.value = false;
-      dialog.value = true;
-      email.value = "";
-    }, 250);
-  });
+  await axios
+    .post(formSparkUrl.value, { email: email.value, position: position.value })
+    .then((response) => {
+      setTimeout(() => {
+        loading.value = false;
+        submitted.value = true;
+        email.value = "";
+      }, 250);
+    });
 };
 
 onMounted(() => {

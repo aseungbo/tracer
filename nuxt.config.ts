@@ -2,11 +2,10 @@ import vuetify from "vite-plugin-vuetify";
 
 // PWA Config
 const title = "트레이서";
-const shortTitle = "트레이서를 통해 문서 전송 과정을 간편하고 빠르게 ";
-const description =
-  "문서를 요청하고나서 올 때까지 확인하고, 다운로드 받고 계시진 않았나요? 트레이서를 통해 번거로운 과정을 벗어나보세요. ";
-const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
-const url = "https://vuetify3nuxt3starter.behonbaker.com/";
+const shortTitle = "트레이서를 통해 문서를 간편하게 수집하세요. ";
+const description = "트레이서를 통해 문서를 취합하는 번거로운 과정을 벗어나보세요!";
+const image = "/favicon.ico";
+const url = "https://www.tracer.team";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
