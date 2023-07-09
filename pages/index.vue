@@ -110,7 +110,7 @@
                   <v-icon :color="twColors.palette.blue" size="2rem">mdi-lightning-bolt</v-icon>
                   <span class="text-h5 font-weight-bold">Tracer</span>
                 </div>
-                <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center mb-8">
+                <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center my-8">
                   🚀 트레이서는 아직 개발 중이에요
                 </p>
                 <v-text-field
@@ -140,7 +140,7 @@
               </p>
             </v-card-text>
             <v-card-actions class="d-flex flex-column" style="gap: 1rem">
-              <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center">
+              <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center mb-8">
                 🎁 사전예약하고 1개월 이용권 받기
               </p>
               <v-btn
