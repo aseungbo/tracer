@@ -177,7 +177,7 @@
 <script setup>
 import axios from "axios";
 
-const videoUrl = ref("https://www.youtube.com/watch?v=2YLs33C72zo"); // 비디오 URL
+const videoUrl = ref("https://www.youtube.com/watch?v=YiiD9ddqbOc"); // 비디오 URL
 
 const getVideoId = (url) => {
   const videoId = url.split("v=")[1];
