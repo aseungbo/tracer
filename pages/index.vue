@@ -77,15 +77,16 @@
             <span
               class="text-h5 text-sm-h3 font-weight-bold mt-0 mt-sm-16"
               :style="`color: ${twColors.palette.blue};`"
-              >간소화</span
+              >간편한</span
             >
-            된 방법
+            방법
           </p>
         </div>
         <div class="d-flex flex-column my-16 align-center" style="gap: 0.5rem">
           <p class="text-subtitle-1 text-sm-h5 font-weight-bold">
-            트레이서와 함께 문서 수집을 간편하게 해보세요.
+            트레이서를 통해 문서 취합 과정을
           </p>
+          <p class="text-subtitle-1 text-sm-h5 font-weight-bold">쉽게 확인하고, 관리해보세요.</p>
         </div>
 
         <v-btn
@@ -102,7 +103,7 @@
             시작하기
           </span>
         </v-btn>
-        <v-dialog class="w-25" v-model="dialog" style="min-width: 370px">
+        <v-dialog v-model="dialog" style="min-width: 370px; width: 35%">
           <v-card class="align-center py-8" style="height: 40rem">
             <v-card-text v-if="!submitted" class="w-75 d-flex flex-column justify-center">
               <v-form class="w-100 d-flex flex-column align-center">
@@ -115,7 +116,7 @@
                 </p>
                 <v-text-field
                   class="w-100 my-8"
-                  label="업무"
+                  label="담당 업무"
                   placeholder="어떤 업무를 하시나요?"
                   hide-details
                   clearable

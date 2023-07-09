@@ -2,8 +2,8 @@ import vuetify from "vite-plugin-vuetify";
 
 // PWA Config
 const title = "트레이서";
-const shortTitle = "트레이서와 함께 문서 수집을 간편하게 해보세요.";
-const description = "트레이서는 문서를 취합하는 가장 안전하고 간소화된 방법입니다.";
+const shortTitle = "문서를 취합 하는 가장 안전하고, 간편한 방법";
+const description = "트레이서를 통해 문서 취합 과정을 쉽게 확인하고, 관리해보세요.";
 const image = "/logo.png";
 const url = "https://www.tracer.team";
 
