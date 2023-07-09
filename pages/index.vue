@@ -140,9 +140,9 @@
               </p>
             </v-card-text>
             <v-card-actions class="d-flex flex-column" style="gap: 1rem">
-              <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center mb-8">
+              <!-- <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center mb-8">
                 🎁 사전예약하고 1개월 이용권 받기
-              </p>
+              </p> -->
               <v-btn
                 :loading="loading"
                 style="min-width: 200px; min-height: 50px"
