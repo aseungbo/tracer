@@ -111,9 +111,12 @@
                   <v-icon :color="twColors.palette.blue" size="2rem">mdi-lightning-bolt</v-icon>
                   <span class="text-h5 font-weight-bold">Tracer</span>
                 </div>
-                <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center my-8">
-                  🚀 트레이서는 아직 개발 중이에요
+                <p
+                  class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center mt-8 mb-2"
+                >
+                  🚀 트레이서는 아직 준비중이에요!
                 </p>
+
                 <v-text-field
                   class="w-100 my-8"
                   label="담당 업무"
