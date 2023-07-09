@@ -2,9 +2,9 @@ import vuetify from "vite-plugin-vuetify";
 
 // PWA Config
 const title = "트레이서";
-const shortTitle = "트레이서를 통해 문서를 간편하게 수집하세요. ";
-const description = "트레이서를 통해 문서를 취합하는 번거로운 과정을 벗어나보세요!";
-const image = "/favicon.ico";
+const shortTitle = "트레이서와 함께 문서 수집을 간편하게 해보세요.";
+const description = "트레이서는 문서를 취합하는 가장 안전하고 간소화된 방법입니다.";
+const image = "/logo.png";
 const url = "https://www.tracer.team";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config

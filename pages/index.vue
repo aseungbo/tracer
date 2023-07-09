@@ -28,22 +28,22 @@
       :style="`min-height: ${cardHeight}`"
     >
       <div
-        class="d-flex flex-column w-100 w-sm-50 align-center align-sm-start text-center px-8 mx-sm-16"
+        class="d-flex flex-column w-100 w-sm-50 align-center align-sm-start text-center mx-sm-16"
         style="gap: 1rem; max-width: 840px; min-width: 375px"
       >
         <div class="d-none d-sm-flex w-100 align-center">
           <span
-            class="text-sm-h2 font-weight-bold mt-8 mt-sm-16 text-center"
-            style="min-height: 50px; width: 25%; min-width: 200px"
+            class="text-sm-h3 font-weight-bold mt-8 mt-sm-16 pr-16"
+            style="min-height: 50px; min-width: 200px"
             :style="`color: ${twColors.palette.blue};`"
             >{{ currentText }}</span
           >
           <span
-            class="text-sm-h2 font-weight-bold mt-8 mt-sm-16"
-            style="min-height: 50px; width: 75%"
+            class="text-sm-h3 font-weight-bold mt-8 mt-sm-16 pr-16 flex-shrink-0"
+            style="min-height: 50px; min-width: 400px"
             >문서를
             <span
-              class="text-sm-h2 font-weight-bold mt-8 mt-sm-16"
+              class="text-sm-h3 font-weight-bold mt-8 mt-sm-16"
               style="min-height: 50px"
               :style="`color: ${twColors.palette.blue};`"
               >취합
@@ -61,20 +61,21 @@
           <span class="text-h5 font-weight-bold"
             >문서를
             <span class="text-h5 font-weight-bold" :style="`color: ${twColors.palette.blue};`"
-              >취합하는
+              >취합
             </span>
+            하는
           </span>
         </div>
         <div class="d-flex align-center">
-          <p class="text-h5 text-sm-h2 font-weight-bold mt-0">
+          <p class="text-h5 text-sm-h3 font-weight-bold mt-0 flex-shrink-0">
             가장
             <span
-              class="text-h5 text-sm-h2 font-weight-bold mt-0 mt-sm-16"
+              class="text-h5 text-sm-h3 font-weight-bold mt-0 mt-sm-16"
               :style="`color: ${twColors.palette.blue};`"
               >안전</span
             >하고,
             <span
-              class="text-h5 text-sm-h2 font-weight-bold mt-0 mt-sm-16"
+              class="text-h5 text-sm-h3 font-weight-bold mt-0 mt-sm-16"
               :style="`color: ${twColors.palette.blue};`"
               >간소화</span
             >
@@ -83,7 +84,7 @@
         </div>
         <div class="d-flex flex-column my-16 align-center" style="gap: 0.5rem">
           <p class="text-subtitle-1 text-sm-h5 font-weight-bold">
-            트레이서를 통해 문서를 간편하게 수집하세요.
+            트레이서와 함께 문서 수집을 간편하게 해보세요.
           </p>
         </div>
 
@@ -109,33 +110,26 @@
                   <v-icon :color="twColors.palette.blue" size="2rem">mdi-lightning-bolt</v-icon>
                   <span class="text-h5 font-weight-bold">Tracer</span>
                 </div>
-                <p class="text-subtitle-1 font-weight-bold text-center mb-4">
-                  현재 열심히 개발 중이에요 🚀
+                <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center mb-8">
+                  🚀 트레이서는 아직 개발 중이에요
                 </p>
-                <p class="text-subtitle-1 font-weight-bold text-center mb-4">
-                  사전예약하고 1개월 무료 이용권 받아보세요!
-                </p>
-                <p class="text-subtitle-1 font-weight-bold align-center mb-4">이메일</p>
                 <v-text-field
-                  class="w-100 mb-8"
-                  label="이메일"
-                  placeholder="이메일"
-                  single-line
-                  hide-details
-                  clearable
-                  color="blue"
-                  v-model="email"
-                ></v-text-field>
-                <p class="text-subtitle-1 font-weight-bold text-center mb-4">직책</p>
-                <v-text-field
-                  class="w-100 mb-8"
-                  label="직책"
-                  placeholder="직책"
-                  single-line
+                  class="w-100 my-8"
+                  label="업무"
+                  placeholder="어떤 업무를 하시나요?"
                   hide-details
                   clearable
                   color="blue"
                   v-model="position"
+                ></v-text-field>
+                <v-text-field
+                  class="w-100"
+                  label="이메일"
+                  placeholder="이메일"
+                  hide-details
+                  clearable
+                  color="blue"
+                  v-model="email"
                 ></v-text-field>
               </v-form>
             </v-card-text>
@@ -145,7 +139,10 @@
                 사전예약이 완료되었습니다.
               </p>
             </v-card-text>
-            <v-card-actions>
+            <v-card-actions class="d-flex flex-column" style="gap: 1rem">
+              <p class="text-subtitle-2 text-sm-subtitle-1 font-weight-bold text-center">
+                🎁 사전예약하고 1개월 이용권 받기
+              </p>
               <v-btn
                 :loading="loading"
                 style="min-width: 200px; min-height: 50px"
@@ -167,7 +164,7 @@
           </v-card>
         </v-dialog>
       </div>
-      <div class="d-flex w-50 video-style">
+      <div class="d-flex w-50 video-style pl-sm-16">
         <iframe class="w-100" :src="embedUrl" style="width: 20rem" frameborder="0"></iframe>
       </div>
     </div>
@@ -273,7 +270,7 @@ onMounted(() => {
 @media screen and (max-width: 600px) {
   .video-style {
     min-width: 320px;
-    height: 215px;
+    height: 320px;
   }
 }
 
