@@ -34,7 +34,7 @@
         <div class="d-none d-sm-flex w-100 align-center">
           <span
             class="text-sm-h3 font-weight-bold mt-8 mt-sm-16 pr-16"
-            style="min-height: 50px; min-width: 200px"
+            style="min-height: 50px; min-width: 210px"
             :style="`color: ${twColors.palette.blue};`"
             >{{ currentText }}</span
           >
