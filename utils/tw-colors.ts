@@ -291,5 +291,6 @@ export const twColors = {
     white: "#f9fafb",
     blue: "#3182f6",
     gray: "#f8f8f8",
+    red: "#db5257",
   },
 };

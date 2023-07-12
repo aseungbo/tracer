@@ -41,6 +41,21 @@ export default defineNuxtConfig({
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       `,
         },
+        {
+          hid: "google-analytics",
+          src: "https://www.googletagmanager.com/gtag/js?id=G-4P87YRFZDM",
+          async: true,
+        },
+        {
+          hid: "google-analytics-config",
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'G-4P87YRFZDM');
+          `,
+        },
       ],
       title: "Tracer",
       titleTemplate: "%s | Tracer",
