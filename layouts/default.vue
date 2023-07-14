@@ -22,7 +22,7 @@
           <ul class="d-flex justify-center" style="list-style: none; gap: 3rem">
             <li>
               <a
-                style="cursor: pointer; border-radius: 50%; opacity: 0.7"
+                style="cursor: pointer; border-radius: 50%;"
                 href="https://www.threads.net/@tracer_company"
               >
                 <v-img width="36" style="color: #fff" :src="threads"></v-img>
@@ -30,7 +30,7 @@
             </li>
             <li>
               <a
-                style="cursor: pointer; border-radius: 50%; opacity: 0.7"
+                style="cursor: pointer; border-radius: 50%;"
                 href="https://blog.naver.com/tracer42/223154991451"
               >
                 <v-icon class="w-100 h-100" size="36" icon="mdi-alpha-n-box-outline"></v-icon>
@@ -38,7 +38,7 @@
             </li>
             <li>
               <a
-                style="cursor: pointer; border-radius: 50%; opacity: 0.7"
+                style="cursor: pointer; border-radius: 50%;"
                 href="https://www.youtube.com/watch?v=YiiD9ddqbOc"
                 ><v-icon size="36" icon="mdi-youtube"></v-icon>
               </a>
