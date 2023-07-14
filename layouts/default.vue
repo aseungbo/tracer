@@ -45,7 +45,7 @@
             </li>
             <li>
               <a
-                style="cursor: pointer; border-radius: 50%; opacity: 0.7"
+                style="cursor: pointer; border-radius: 50%;"
                 href="https://www.instagram.com/tracer_company"
               >
                 <v-icon size="36" icon="mdi-instagram"></v-icon>
